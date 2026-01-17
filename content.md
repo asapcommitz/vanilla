@@ -1,6 +1,6 @@
-# Welcome to VanillaMD
+# Welcome to [untitled]markdown
 
-This is a **fully featured Markdown site** powered by a single script. VanillaMD now supports comprehensive Markdown and rich text formatting.
+This is a **fully featured Markdown site** powered by a single script. [untitled]markdown now supports comprehensive Markdown and rich text formatting.
 
 ## Core Features
 
@@ -73,7 +73,7 @@ Use `const variable = value` for inline code.
 
 ```javascript
 function greet(name) {
-  return `Hello, ${name}! Welcome to VanillaMD.`;
+  return `Hello, ${name}! Welcome to [untitled]markdown.`;
 }
 
 console.log(greet("World"));
@@ -106,7 +106,7 @@ Tables now work with full alignment support:
 
 > "Markdown, minus the nonsense."
 >
-> VanillaMD makes it easy to create beautiful documentation with zero dependencies.
+> [untitled]markdown makes it easy to create beautiful documentation with zero dependencies.
 
 > **Note:** Blockquotes can contain **formatting** and even `code`.
 

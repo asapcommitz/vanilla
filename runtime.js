@@ -322,3 +322,19 @@ class ContentElement extends HTMLElement {
 if (!customElements.get("mark-down")) {
   customElements.define("mark-down", ContentElement);
 }
+
+// Auto-loader for a zero-config experience
+document.addEventListener("DOMContentLoaded", () => {
+  const targetElement = document.querySelector("[data-untitledmarkdown-autofill]");
+
+  if (targetElement) {
+    // Use the attribute's value as the source, or default to "content.md"
+    const source = targetElement.getAttribute("data-untitledmarkdown-autofill") || "content.md";
+    
+    if (targetElement.innerHTML.trim() === '') {
+      const markdownElement = document.createElement("mark-down");
+      markdownElement.setAttribute("src", source);
+      targetElement.appendChild(markdownElement);
+    }
+  }
+});

@@ -1,13 +1,13 @@
 
-# VanillaMD Documentation
+# [untitled]markdown Documentation
 
-Welcome to the official documentation for VanillaMD, a lightweight and dependency-free Markdown renderer for the web.
+Welcome to the official documentation for [untitled]markdown, a lightweight and dependency-free Markdown renderer for the web.
 
 ## <a name="introduction"></a>Introduction
 
-VanillaMD is a simple yet powerful tool that allows you to render Markdown files directly in your HTML without any complex setup or dependencies. It's built with vanilla JavaScript and is designed to be as easy to use as possible.
+[untitled]markdown is a simple yet powerful tool that allows you to render Markdown files directly in your HTML without any complex setup or dependencies. It's built with vanilla JavaScript and is designed to be as easy to use as possible.
 
-The core philosophy of VanillaMD is to provide a "no-nonsense" Markdown experience. It's perfect for project documentation, personal blogs, or any scenario where you want to write in Markdown and have it seamlessly appear on your webpage.
+The core philosophy of [untitled]markdown is to provide a "no-nonsense" Markdown experience. It's perfect for project documentation, personal blogs, or any scenario where you want to write in Markdown and have it seamlessly appear on your webpage.
 
 ## <a name="features"></a>Features
 
@@ -20,7 +20,19 @@ The core philosophy of VanillaMD is to provide a "no-nonsense" Markdown experien
 
 ## <a name="installation"></a>Installation
 
-Getting started with VanillaMD is incredibly simple. You only need the `runtime.js` file.
+Getting started with [untitled]markdown is incredibly simple. You can use it by directly linking to the `runtime.js` file from a CDN, or by hosting the file yourself.
+
+### Using the CDN (Recommended)
+
+This is the easiest way to get started. Just add this script tag to the bottom of your `<body>` section. It will automatically fetch the latest version of [untitled]markdown.
+
+```html
+<script src="https://cdn.jsdelivr.net/gitlab/untitledcomputer/untitledmarkdown/raw/main/runtime.js" defer></script>
+```
+
+### Self-Hosting
+
+If you prefer to host the file yourself:
 
 1.  **Download `runtime.js`:**
     You can download the `runtime.js` file from the official repository or clone the entire project.
@@ -43,16 +55,38 @@ Getting started with VanillaMD is incredibly simple. You only need the `runtime.
 
 ## <a name="how-it-works"></a>How It Works
 
-VanillaMD uses a custom HTML element called `<mark-down>`. This element will fetch the content of the Markdown file specified in its `src` attribute, parse it, and render it as HTML inside the element itself.
+[untitled]markdown works by automatically finding a placeholder element in your HTML and injecting your Markdown content into it. All you need to do is add a special data attribute to an element, and the runtime script does the rest.
+
+By default, it turns an empty element with the `data-untitledmarkdown-autofill` attribute into a rendered Markdown viewer.
 
 ## <a name="usage"></a>Usage
 
-To use VanillaMD, add the `<mark-down>` element to your HTML and provide the path to your Markdown file in the `src` attribute.
+The easiest way to use [untitled]markdown is to add the `data-untitledmarkdown-autofill` attribute to an empty container element in your HTML, like `<main>`, `<div>`, or `<article>`. The script will automatically load and render the specified Markdown file into this element.
+
+```html
+<!-- This will automatically load "content.md" into the main element -->
+<main data-untitledmarkdown-autofill="content.md"></main>
+```
+
+If you leave the attribute value empty, it will default to loading a file named `content.md` from the same directory.
+
+```html
+<!-- This also loads "content.md" -->
+<main data-untitledmarkdown-autofill></main>
+```
+
+### Manual Usage
+
+For more complex layouts where you might need multiple Markdown sources on a single page, you can still manually place the `<mark-down>` custom element.
 
 ```html
 <main>
   <mark-down src="path/to/your/content.md"></mark-down>
 </main>
+
+<aside>
+  <mark-down src="path/to/another/file.md"></mark-down>
+</aside>
 ```
 
 ### Syntax Highlighting
@@ -68,7 +102,7 @@ For syntax highlighting in your code blocks, you can use a library like `highlig
     ```
 
 2.  **Initialize `highlight.js`:**
-    After the VanillaMD runtime, add a script to initialize `highlight.js`.
+    After the [untitled]markdown runtime, add a script to initialize `highlight.js`.
 
     ```html
     <script src="runtime.js"></script>
@@ -80,7 +114,7 @@ For syntax highlighting in your code blocks, you can use a library like `highlig
 You can easily style the rendered HTML using CSS. The rendered elements are standard HTML tags (`<h1>`, `<p>`, `<ul>`, etc.), so you can target them directly in your stylesheet.
 
 ```css
-/* Example: Style all paragraphs rendered by VanillaMD */
+/* Example: Style all paragraphs rendered by [untitled]markdown */
 mark-down p {
   line-height: 1.6;
   color: #333;
@@ -110,7 +144,7 @@ mark-down blockquote {
 ### Syntax highlighting not working
 
 *   **Check `highlight.js`:** Make sure you have included the `highlight.js` library and a theme stylesheet.
-*   **Initialization:** Ensure you are calling `hljs.highlightAll()` after the VanillaMD runtime script.
+*   **Initialization:** Ensure you are calling `hljs.highlightAll()` after the [untitled]markdown runtime script.
 
 ## <a name="contributing"></a>Contributing
 
@@ -118,4 +152,4 @@ Contributions are welcome! If you have a feature request, bug report, or want to
 
 ## <a name="license"></a>License
 
-VanillaMD is open-source software licensed under the MIT License.
+[untitled]markdown is open-source software licensed under the MIT License.

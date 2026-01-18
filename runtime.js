@@ -186,6 +186,7 @@ pre[data-line] {
 		 * It's necessary because the element is layered on top of the displayed code.
 		 */
 		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
 		color-adjust: exact;
 	}
 }
@@ -368,6 +369,7 @@ div.code-toolbar>.toolbar>.toolbar-item>button {
 	/* for button */
 	-moz-user-select: none;
 	-ms-user-select: none;
+	user-select: none;
 }
 
 div.code-toolbar>.toolbar>.toolbar-item>a,

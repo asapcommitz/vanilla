@@ -249,3 +249,7 @@ footer a {
   color: var(--text-secondary);
   text-decoration: none;
 }
+
+mark-down {
+  display: block;
+}

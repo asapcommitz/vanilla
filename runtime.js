@@ -16,9 +16,9 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: black;
+	color: var(--text-color);
 	background: none;
-	text-shadow: 0 1px white;
+	text-shadow: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: 1em;
 	text-align: left;
@@ -73,7 +73,7 @@ pre[class*="language-"] {
 
 :not(pre)>code[class*="language-"],
 pre[class*="language-"] {
-	background: #f5f2f0;
+	background: var(--code-bg);
 }
 
 /* Inline code */

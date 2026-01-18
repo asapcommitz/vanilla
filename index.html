@@ -8,37 +8,29 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-  <style>
-    @media (prefers-color-scheme: dark) {
-      .hljs {
-        background: #2d2d2d;
-        color: #ddd;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <header class="top-bar">
-    <div class="top-bar-left">
-      <a href="index.html">[untitled]markdown</a>
-    </div>
-    <div class="top-bar-right">
-      <a href="docs.html">Docs</a>
-    </div>
-  </header>
+  <div class="container">
+    <header>
+      <a href="index.html" class="logo">[untitled]markdown</a>
+      <nav>
+        <a href="docs.html">Documentation</a>
+        <a href="https://gitlab.com/untitledcomputer/untitledmarkdown" target="_blank">GitLab</a>
+      </nav>
+    </header>
 
-  <header>
-    <h1>[untitled]markdown Demo</h1>
-    <p>Markdown, minus the nonsense.</p>
-  </header>
+    <main data-untitledmarkdown-autofill="content.md">
+      <!-- Content will be auto-filled by runtime.js -->
+    </main>
 
-  <main data-untitledmarkdown-autofill="content.md">
-  </main>
-
-  <footer>
-    <p>Powered by <strong>[untitled]markdown</strong> &copy; 2025 Felix</p>
-  </footer>
+    <footer>
+      <span>&copy; 2026 [untitled]computer</span>
+      <nav>
+        <a href="https://untitledcomputer.gitlab.io/home/">Home</a>
+      </nav>
+    </footer>
+  </div>
 
   <!-- [untitled]markdown runtime -->
   <script src="runtime.js"></script>

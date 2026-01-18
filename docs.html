@@ -8,53 +8,34 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-  <style>
-    @media (prefers-color-scheme: dark) {
-      .hljs {
-        background: #2d2d2d;
-        color: #ddd;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <header class="top-bar">
-    <div class="top-bar-left">
-      <a href="index.html">[untitled]markdown</a>
-    </div>
-    <div class="top-bar-right">
-      <a href="docs.html">Docs</a>
-    </div>
-  </header>
-
-  <div class="docs-container">
-    <aside class="sidebar">
+  <div class="container">
+    <header>
+      <a href="index.html" class="logo">[untitled]markdown</a>
       <nav>
-        <ul>
-          <li><a href="#introduction">Introduction</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#installation">Installation</a></li>
-          <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#usage">Usage</a></li>
-          <li><a href="#customization">Customization</a></li>
-          <li><a href="#troubleshooting">Troubleshooting</a></li>
-          <li><a href="#contributing">Contributing</a></li>
-          <li><a href="#license">License</a></li>
-        </ul>
+        <a href="docs.html" style="color: var(--text-color);">Documentation</a>
+        <a href="https://gitlab.com/untitledcomputer/untitledmarkdown" target="_blank">GitLab</a>
       </nav>
-    </aside>
-    <main data-untitledmarkdown-autofill="docs.md">
-    </main>
-  </div>
+    </header>
 
-  <footer>
-    <p>Powered by <strong>[untitled]markdown</strong> &copy; 2025 Felix</p>
-  </footer>
+    <main data-untitledmarkdown-autofill="docs.md">
+      <!-- Content will be auto-filled by runtime.js -->
+    </main>
+
+    <footer>
+      <span>&copy; 2026 [untitled]computer</span>
+      <nav>
+        <a href="https://untitledcomputer.gitlab.io/home/">Home</a>
+      </nav>
+    </footer>
+  </div>
 
   <!-- [untitled]markdown runtime -->
   <script src="runtime.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </body>
 
 </html>

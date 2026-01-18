@@ -1,136 +1,59 @@
 # Welcome to [untitled]markdown
 
-This is a **fully featured Markdown site** powered by a single script. [untitled]markdown now supports comprehensive Markdown and rich text formatting.
+Markdown, minus the nonsense. A lightweight, dependency-free renderer for the modern web.
 
-## Core Features
+## Typography
 
-- Headings (H1 through H6)
-- **Bold**, *Italic*, and ***Bold Italic*** text
-- `Inline code` and code blocks with syntax highlighting
-- ~~Strikethrough~~ and ==highlighted== text
-- Ordered and unordered lists
-- Task lists with checkboxes
-- Blockquotes
-- Links with titles
-- Images with alt text and titles
-- Tables with alignment
-- Horizontal rules
-- Superscript^^2^^ and Subscript~i~
-- Auto-linking URLs
-- Emoji support :rocket: :star: :fire:
+Good typography makes content readable. [untitled]markdown uses a carefully selected pair: **Crimson Pro** for headings and **Raveo** for body text.
 
----
+You can emphasize text using **bold**, *italics*, or ~~strikethrough~~.
+Highlighted text is also supported using ==double equals==.
 
-## Text Formatting Examples
+## Code
 
-**Bold text** using `**text**` or `__text__`
+Code blocks are styled with **UntitledMono** and utilize the minimalist `f5f5f5` background.
 
-*Italic text* using `*text*` or `_text_`
+```javascript
+// Example of a code block
+function init() {
+  const aesthetic = "minimalist";
+  return aesthetic;
+}
+```
 
-***Bold and italic*** using `***text***` or `___text___`
-
-~~Strikethrough text~~ using `~~text~~`
-
-==Highlighted text== using `==text==`
-
-Superscript: E = mc^^2^^
-
-Subscript: H~2~O
-
----
+Inline code works like `const aesthetic = "minimalist"`.
 
 ## Lists
 
-### Unordered Lists
+Unordered lists for grouping items:
 
-- Item one
-- Item two
-- Item three
-  + Nested item (using + or *)
-  + Another nested item
+- Zero dependencies
+- Semantic HTML output
+- Custom Element support
+- Extensible via CSS
 
-### Ordered Lists
+Ordered lists for steps:
 
-1. First item
-2. Second item
-3. Third item
-
-### Task Lists
-
-- [x] Completed task
-- [ ] Pending task
-- [x] Another completed task
-
----
-
-## Code Examples
-
-### Inline Code
-
-Use `const variable = value` for inline code.
-
-### Code Blocks
-
-```javascript
-function greet(name) {
-  return `Hello, ${name}! Welcome to [untitled]markdown.`;
-}
-
-console.log(greet("World"));
-```
-
-```python
-def calculate_sum(a, b):
-    return a + b
-
-result = calculate_sum(5, 10)
-print(f"Result: {result}")
-```
-
----
-
-## Tables
-
-Tables now work with full alignment support:
-
-| Feature | Support | Status |
-|---------|:-------:|-------:|
-| Headers | Yes | :check: |
-| Bold text | Yes | Complete |
-| Alignment | Yes | Working |
-| Nested formatting | **Yes** | *Active* |
-
----
+1.  Include the runtime
+2.  Add the `mark-down` element
+3.  Enjoy
 
 ## Blockquotes
 
-> "Markdown, minus the nonsense."
+> "Simplicity is the ultimate sophistication."
 >
-> [untitled]markdown makes it easy to create beautiful documentation with zero dependencies.
+> — Leonardo da Vinci
 
-> **Note:** Blockquotes can contain **formatting** and even `code`.
+## Tables
 
----
+Clean and legible data presentation.
 
-## Links & Images
-
-[Visit GitHub](https://github.com "GitHub Homepage")
-
-Auto-linked URL: https://example.com
-
-![Placeholder Image](https://via.placeholder.com/400x200 "Sample placeholder image")
+| Feature | Support | Status |
+| :--- | :---: | ---: |
+| Dependencies | None | 0kb |
+| Rendering | Client-side | Fast |
+| License | MIT | Free |
 
 ---
 
-## Emojis
-
-Built-in emoji support: :smile: :heart: :star: :fire: :rocket: :thumbsup: :tada:
-
----
-
-## HTML Support
-
-<div style="padding: 1rem; background: #f0f0f0; border-radius: 8px;">
-  <strong>Custom HTML blocks are supported!</strong>
-  <p>You can mix HTML with Markdown for advanced layouts.</p>
-</div>
+[Documentation](docs.html) · [Source Code](https://gitlab.com/untitledcomputer/untitledmarkdown)

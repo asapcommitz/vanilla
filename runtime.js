@@ -6,8 +6,8 @@ class ContentElement extends HTMLElement {
     try {
       const md = await fetch(src).then(r => r.text());
       this.innerHTML = this.renderMarkdown(md);
-      if (typeof hljs !== 'undefined') {
-        hljs.highlightAll();
+      if (typeof Prism !== 'undefined') {
+        Prism.highlightAll();
       }
     } catch (err) {
       console.error("Failed to load Markdown:", err);
@@ -84,9 +84,8 @@ class ContentElement extends HTMLElement {
       if (inCode) {
         if (line.match(/^```/) || line.match(/^~~~~/)) {
           const codeContent = this.escapeHTML(codeBuffer.join('\n'));
-          // Add button with onclick handler directly for simplicity
-          const buttonHtml = `<button class="copy-btn" onclick="navigator.clipboard.writeText(this.nextElementSibling.innerText || this.nextElementSibling.textContent); this.innerText = 'Copied!'; setTimeout(() => this.innerText = 'Copy', 2000);">Copy</button>`;
-          html += `<pre>${buttonHtml}<code class="language-${codeLang}">${codeContent}</code></pre>`;
+          // Prism uses class="language-xxxx" match-braces etc
+          html += `<pre><code class="language-${codeLang}">${codeContent}</code></pre>`;
           codeBuffer = [];
           inCode = false;
         } else {

@@ -14,7 +14,7 @@ The core philosophy of [untitled]markdown is to provide a "no-nonsense" experien
 
 ### CDN (Recommended)
 
-Add the script to the end of your `&lt;body&gt;`..
+Add the script to the end of your `&lt;body&gt;`.
 
 ```html
 <script src="runtime.js" defer></script>

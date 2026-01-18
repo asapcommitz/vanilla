@@ -47,21 +47,7 @@ For more control, use the custom element directly.
 
 ## Syntax Highlighting
 
-We recommend `highlight.js` for code blocks.
-
-```html
-<!-- Include styles -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-
-<!-- Include script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-
-<!-- Initialize -->
-<script>
-  // Waif for content to load or use a callback in a real app
-  hljs.highlightAll();
-</script>
-```
+Syntax highlighting (PrismJS) and the "Copy" button are **built-in**. No extra files required.
 
 ## Styling
 

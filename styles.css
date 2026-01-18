@@ -197,7 +197,7 @@ pre {
 
 /* Override highlight.js default background */
 pre code.hljs {
-  background-color: transparent;
+  background-color: transparent !important;
   padding: 0;
   display: block;
   /* Ensure it behaves correctly in the block */

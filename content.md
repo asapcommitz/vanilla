@@ -11,7 +11,7 @@ Highlighted text is also supported using ==double equals==.
 
 ## Code
 
-Code blocks are styled with **UntitledMono** and utilize the minimalist `f5f5f5` background.
+Code blocks are styled with **[untitled]mono** and utilize the minimalist `f5f5f5` background.
 
 ```javascript
 // Example of a code block

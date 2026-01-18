@@ -191,11 +191,50 @@ pre {
   border-radius: 8px;
   overflow-x: auto;
   margin-bottom: 1.5rem;
+  position: relative;
+  /* For copy button positioning */
 }
 
-pre code {
+/* Override highlight.js default background */
+pre code.hljs {
   background-color: transparent;
   padding: 0;
+  display: block;
+  /* Ensure it behaves correctly in the block */
+}
+
+/* General override just in case */
+pre code {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0;
+  /* Hidden by default until hover */
+}
+
+pre:hover .copy-btn {
+  opacity: 1;
+}
+
+.copy-btn:hover {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-color: var(--text-color);
 }
 
 /* --- Markdown Content Specifics --- */

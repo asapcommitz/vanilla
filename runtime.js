@@ -83,7 +83,10 @@ class ContentElement extends HTMLElement {
 
       if (inCode) {
         if (line.match(/^```/) || line.match(/^~~~~/)) {
-          html += `<pre><code class="language-${codeLang}">${this.escapeHTML(codeBuffer.join('\n'))}</code></pre>`;
+          const codeContent = this.escapeHTML(codeBuffer.join('\n'));
+          // Add button with onclick handler directly for simplicity
+          const buttonHtml = `<button class="copy-btn" onclick="navigator.clipboard.writeText(this.nextElementSibling.innerText || this.nextElementSibling.textContent); this.innerText = 'Copied!'; setTimeout(() => this.innerText = 'Copy', 2000);">Copy</button>`;
+          html += `<pre>${buttonHtml}<code class="language-${codeLang}">${codeContent}</code></pre>`;
           codeBuffer = [];
           inCode = false;
         } else {

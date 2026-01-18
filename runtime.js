@@ -794,8 +794,8 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
 @font-face {
 	font-family: "PrismTreeview";
 	/**
-	 * This font is generated from the .svg files in the \\`icons\\` folder. See the \\`treeviewIconFont\\` function in
-	 * \\`gulpfile.js/index.js\\` for more information.
+	 * This font is generated from the .svg files in the \`icons\` folder. See the \`treeviewIconFont\` function in
+	 * \`gulpfile.js/index.js\` for more information.
 	 *
 	 * Use the following escape sequences to refer to a specific icon:
 	 *

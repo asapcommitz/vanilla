@@ -16,7 +16,7 @@ class ContentElement extends HTMLElement {
   }
 
   escapeHTML(str) {
-    return str.replace(/[&<>"']/g, function(match) {
+    return str.replace(/[&<>"']/g, function (match) {
       return {
         '&': '&amp;',
         '<': '&lt;',
@@ -107,7 +107,7 @@ class ContentElement extends HTMLElement {
           flushBlockquote();
         } else {
           blockquoteBuffer.push(line.replace(/^>\s?/, ''));
-          if (!lines[i+1] || !lines[i+1].match(/^>/)) {
+          if (!lines[i + 1] || !lines[i + 1].match(/^>/)) {
             flushBlockquote();
           }
           continue;
@@ -138,18 +138,18 @@ class ContentElement extends HTMLElement {
         flushTable();
         inBlockquote = true;
         blockquoteBuffer.push(blockquoteMatch[1]);
-        if (!lines[i+1] || !lines[i+1].match(/^>/)) {
+        if (!lines[i + 1] || !lines[i + 1].match(/^>/)) {
           flushBlockquote();
         }
         continue;
       }
 
-      if (inTable || (line.includes('|') && lines[i+1] && lines[i+1].match(/^\|?[\s:|-]+\|/))) {
+      if (inTable || (line.includes('|') && lines[i + 1] && lines[i + 1].match(/^\|?[\s:|-]+\|/))) {
         if (!inTable) {
           flushList();
           inTable = true;
           tableHeaders = line.split('|').filter(h => h.trim()).map(h => h.trim());
-          const alignLine = lines[i+1];
+          const alignLine = lines[i + 1];
           tableAlignments = alignLine.split('|').filter(a => a.trim()).map(a => {
             a = a.trim();
             if (a.startsWith(':') && a.endsWith(':')) return 'center';
@@ -180,7 +180,7 @@ class ContentElement extends HTMLElement {
           listType = 'task';
         }
         listBuffer.push(`<li class="task-item"><input type="checkbox" ${checked ? 'checked' : ''} disabled> ${this.processInlineMarkdown(taskMatch[2])}</li>`);
-        if (!lines[i+1] || !lines[i+1].match(/^\s*[-*]\s+\[[ xX]\]/)) {
+        if (!lines[i + 1] || !lines[i + 1].match(/^\s*[-*]\s+\[[ xX]\]/)) {
           flushList();
         }
         continue;
@@ -198,7 +198,7 @@ class ContentElement extends HTMLElement {
           listLevel = currentLevel;
         }
         listBuffer.push(`<li>${this.processInlineMarkdown(ulMatch[2])}</li>`);
-        if (!lines[i+1] || !lines[i+1].match(/^\s*[-*+]\s+/)) {
+        if (!lines[i + 1] || !lines[i + 1].match(/^\s*[-*+]\s+/)) {
           flushList();
         }
         continue;
@@ -214,7 +214,7 @@ class ContentElement extends HTMLElement {
           listType = 'ol';
         }
         listBuffer.push(`<li>${this.processInlineMarkdown(olMatch[1])}</li>`);
-        if (!lines[i+1] || !lines[i+1].match(/^\s*\d+\.\s+/)) {
+        if (!lines[i + 1] || !lines[i + 1].match(/^\s*\d+\.\s+/)) {
           flushList();
         }
         continue;
@@ -330,11 +330,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (targetElement) {
     // Use the attribute's value as the source, or default to "content.md"
     const source = targetElement.getAttribute("data-untitledmarkdown-autofill") || "content.md";
-    
-    if (targetElement.innerHTML.trim() === '') {
-      const markdownElement = document.createElement("mark-down");
-      markdownElement.setAttribute("src", source);
-      targetElement.appendChild(markdownElement);
-    }
+
+    // Clear existing content (e.g. comments or whitespace) and inject the component
+    targetElement.innerHTML = '';
+    const markdownElement = document.createElement("mark-down");
+    markdownElement.setAttribute("src", source);
+    targetElement.appendChild(markdownElement);
   }
 });

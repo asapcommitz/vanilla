@@ -24,7 +24,7 @@ Add the script to the end of your `&lt;body&gt;`.
 
 1.  Download `runtime.js` from the repository.
 2.  Include it in your specific project directory.
-3.  Link it via `<script src="runtime.js"></script>`.
+3. Link it via `<script src="runtime.js"></script>`.
 
 ## Usage
 

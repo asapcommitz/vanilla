@@ -19,7 +19,7 @@ pre[class*="language-"] {
 	color: var(--text-color);
 	background: none;
 	text-shadow: none;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: var(--font-mono) !important;
 	font-size: 1em;
 	text-align: left;
 	white-space: pre;

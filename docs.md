@@ -1,10 +1,10 @@
 # Documentation
 
-[untitled]markdown is a lightweight, dependency-free Markdown renderer for the web.
+vanilla.md is a lightweight, dependency-free Markdown renderer for the web.
 
 ## Introduction
 
-The core philosophy of [untitled]markdown is to provide a "no-nonsense" experience. It parses Markdown directly in the browser using vanilla JavaScript, making it perfect for documentation sites, blogs, or simple content pages.
+The core philosophy of vanilla.md is to provide a "no-nonsense" experience. It parses Markdown directly in the browser using vanilla JavaScript, making it perfect for documentation sites, blogs, or simple content pages.
 
 - **Zero Dependencies:** Pure Vanilla JS.
 - **Lightweight:** Minimal footprint.
@@ -30,11 +30,11 @@ Add the script to the end of your `&lt;body&gt;`.
 
 ### Auto-fill
 
-The simplest way is to use the `data-untitledmarkdown-autofill` attribute on a container.
+The simplest way is to use the `data-vanillamd-autofill` attribute on a container.
 
 ```html
 <!-- Loads "content.md" automatically -->
-<main data-untitledmarkdown-autofill="content.md"></main>
+<main data-vanillamd-autofill="content.md"></main>
 ```
 
 ### Custom Element
@@ -63,4 +63,5 @@ mark-down blockquote {
 
 ## License
 
-MIT License. &copy; 2026 [untitled]computer.
+MIT License. &copy; 2026 vanilla.md
+

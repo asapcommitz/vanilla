@@ -1,5 +1,5 @@
 /**
- * [untitled]markdown runtime
+ * vanilla.md runtime
  * Bundled with PrismJS and default plugins
  */
 
@@ -27686,11 +27686,11 @@ if (!customElements.get("mark-down")) {
 
 // Auto-loader for a zero-config experience
 document.addEventListener("DOMContentLoaded", () => {
-  const targetElement = document.querySelector("[data-untitledmarkdown-autofill]");
+  const targetElement = document.querySelector("[data-vanillamd-autofill]");
 
   if (targetElement) {
     // Use the attribute's value as the source, or default to "content.md"
-    const source = targetElement.getAttribute("data-untitledmarkdown-autofill") || "content.md";
+    const source = targetElement.getAttribute("data-vanillamd-autofill") || "content.md";
 
     // Clear existing content (e.g. comments or whitespace) and inject the component
     targetElement.innerHTML = '';

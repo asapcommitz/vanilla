@@ -1,17 +1,17 @@
-# Welcome to [untitled]markdown
+# Welcome to vanilla.md
 
 Markdown, minus the nonsense. A lightweight, dependency-free renderer for the modern web.
 
 ## Typography
 
-Good typography makes content readable. [untitled]markdown uses a carefully selected pair: **Crimson Pro** for headings and **Raveo** for body text.
+Good typography makes content readable. vanilla.md uses a carefully selected pair: **Crimson Pro** for headings and **Raveo** for body text.
 
 You can emphasize text using **bold**, *italics*, or ~~strikethrough~~.
 Highlighted text is also supported using ==double equals==.
 
 ## Code
 
-Code blocks are styled with **[untitled]mono** and utilize the minimalist `f5f5f5` background.
+Code blocks are styled with **vanilla-mono** and utilize the minimalist `f5f5f5` background.
 
 ```javascript
 // Example of a code block
@@ -56,4 +56,5 @@ Clean and legible data presentation.
 
 ---
 
-[Documentation](docs.html) · [Source Code](https://gitlab.com/untitledcomputer/untitledmarkdown)
+[Documentation](docs.html) · [Source Code](https://github.com/vanillamd/vanilla.md)
+

@@ -1,6 +1,6 @@
-# [untitled]markdown
+# vanilla.md
 
-[untitled]markdown is a lightweight, dependency-free Markdown renderer for the web. It uses a custom HTML element `<mark-down>` to fetch and render Markdown files directly in your HTML.
+vanilla.md is a lightweight, dependency-free Markdown renderer for the web. It uses a custom HTML element `<mark-down>` to fetch and render Markdown files directly in your HTML.
 
 ## Demo
 
@@ -8,7 +8,7 @@ See `index.html` for a working demo that loads `content.md`.
 
 ## Running Locally
 
-Because [untitled]markdown uses the `fetch` API to load Markdown files, you need to use a local web server to view your project. Opening the HTML file directly from your filesystem (`file://...`) will not work due to browser security policies.
+Because vanilla.md uses the `fetch` API to load Markdown files, you need to use a local web server to view your project. Opening the HTML file directly from your filesystem (`file://...`) will not work due to browser security policies.
 
 You can use any simple web server. If you have Python installed, you can run one easily.
 

@@ -24,6 +24,14 @@ You can use any simple web server. If you have Python installed, you can run one
 
 You should now see your `index.html` page with the rendered Markdown content.
 
+## Installation
+
+The easiest way to use vanilla.md is via CDN. Just add this script tag to your HTML:
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/asapcommitz/vanilla@latest/runtime.js" defer></script>
+```
+
 ## Usage
 
 For detailed usage instructions, please see the [documentation](docs.html).

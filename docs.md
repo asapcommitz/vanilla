@@ -17,7 +17,7 @@ The core philosophy of vanilla.md is to provide a "no-nonsense" experience. It p
 Add the script to the end of your `&lt;body&gt;`.
 
 ```html
-<script src="runtime.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/asapcommitz/vanilla@latest/runtime.js" defer></script>
 ```
 
 ### Manual Setup

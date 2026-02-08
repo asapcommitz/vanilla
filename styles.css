@@ -52,43 +52,69 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-}
-
-/* --- Header & Navigation --- */
-
-header {
-  margin-bottom: 4rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border-color);
+.app-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  min-height: 100vh;
 }
 
-.logo {
+/* --- Sidebar --- */
+
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  border-right: 1px solid var(--border-color);
+  padding: 3rem 1.5rem;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar .logo {
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 1.25rem;
   text-decoration: none;
   color: var(--text-color);
-  letter-spacing: -0.02em;
+  margin-bottom: 3rem;
+  display: block;
 }
 
-nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
+/* --- Main Content --- */
+
+main {
+  flex: 1;
+  padding: 4rem 4rem;
+  max-width: 1000px;
 }
 
-nav a:hover {
-  color: var(--text-color);
+@media (max-width: 768px) {
+  .app-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 1.5rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .sidebar .logo {
+    margin-bottom: 1rem;
+  }
+
+  main {
+    padding: 2rem 1.5rem;
+  }
 }
+
+/* --- Header & Navigation --- */
+
 
 /* --- Typography Rules (Strict) --- */
 
@@ -136,6 +162,104 @@ a {
 
 a:hover {
   text-decoration-thickness: 2px;
+}
+
+/* --- Sidebar specific styles (Automated TOC) --- */
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.nav-link-wrapper {
+  margin-bottom: 0.1rem;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: block;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  color: var(--text-color);
+  background-color: var(--code-bg);
+}
+
+.sidebar nav a.active {
+  font-weight: 600;
+}
+
+.nav-summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Arrow for the main header */
+.nav-summary::before {
+  content: '→';
+  position: absolute;
+  left: -0.25rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0.3;
+  transition: transform 0.2s ease;
+}
+
+details[open]>.nav-summary::before {
+  transform: rotate(90deg);
+  opacity: 0.6;
+}
+
+.sidebar-nav-tree {
+  margin-left: 1.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  border-left: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.nav-link.sub-link {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.75rem;
+  color: var(--text-secondary);
+}
+
+.sidebar-loading {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  padding: 0.5rem 1.5rem;
+  font-style: italic;
+}
+
+.nav-children {
+  margin-left: 0.75rem;
+}
+
+/* Sub-level arrows */
+details summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
 }
 
 /* --- Code Styling --- */

@@ -81,14 +81,14 @@ body {
 }
 
 .sidebar .logo {
-  font-family: var(--font-sans);
-  font-weight: 800;
-  font-size: 1.4rem;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 1.15rem;
   text-decoration: none;
   color: var(--text-color);
   margin-bottom: 2.5rem;
-  letter-spacing: -0.04em;
   display: block;
+  letter-spacing: 0.05rem;
 }
 
 .sidebar nav {
@@ -123,30 +123,33 @@ body {
   font-weight: 500;
 }
 
-.nav-summary {
+.nav-summary,
+.sidebar-nav-tree summary {
   list-style: none;
   cursor: pointer;
   position: relative;
-  display: flex;
-  align-items: center;
 }
 
-.nav-summary::-webkit-details-marker {
+.nav-summary::-webkit-details-marker,
+.sidebar-nav-tree summary::-webkit-details-marker {
   display: none;
 }
 
-.nav-summary::before {
+.nav-summary::before,
+.sidebar-nav-tree summary::before {
   content: '→';
   position: absolute;
-  left: -0.25rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 0.7rem;
   color: var(--text-secondary);
   opacity: 0.4;
-  transition: transform 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-details[open]>.nav-summary::before {
-  transform: rotate(90deg);
+details[open]>summary::before {
+  transform: translateY(-50%) rotate(90deg);
   opacity: 0.8;
 }
 

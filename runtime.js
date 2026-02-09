@@ -27643,7 +27643,10 @@ pre>code.diff-highlight .token.inserted:not(.prefix) {
 			});
 
 			text = text.replace(/\[([^\]]+)\]\(([^\s)"]+)(?:\s+"([^"]+)")?\)/g, (match, linkText, url, title) => {
-				return title ? `<a href="${url}" title="${title}">${linkText}</a>` : `<a href="${url}">${linkText}</a>`;
+				const isExternal = /^(?:https?|ftp):\/\//.test(url);
+				const arrow = isExternal ? ' &#x2197;' : '';
+				const content = linkText + arrow;
+				return title ? `<a href="${url}" title="${title}">${content}</a>` : `<a href="${url}">${content}</a>`;
 			});
 
 			text = text.replace(/~~([^~]+)~~/g, '<del>$1</del>');
@@ -27660,7 +27663,7 @@ pre>code.diff-highlight .token.inserted:not(.prefix) {
 			text = text.replace(/~([^~]+)~/g, '<sub>$1</sub>');
 
 			// 2. Auto-link URLs (excluding those already in HTML attributes)
-			text = text.replace(/([^"'])((?:https?|ftp):\/\/[^\s<]+)/g, '$1<a href="$2">$2</a>');
+			text = text.replace(/([^"'])((?:https?|ftp):\/\/[^\s<]+)/g, '$1<a href="$2">$2 &#x2197;</a>');
 
 			text = text.replace(/:\w+:/g, (match) => {
 				const emoji = this.getEmoji(match);

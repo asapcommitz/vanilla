@@ -11,23 +11,21 @@
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <a href="index.html" class="logo">vanilla.md</a>
-      <nav>
-        <a href="docs.html" style="color: var(--text-color);">Documentation</a>
-        <a href="https://github.com/asapcommitz/vanilla" target="_blank">GitHub</a>
+  <div class="app-wrapper">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="logo">vanilla.md</a>
+        <nav class="top-nav">
+          <a href="https://github.com/asapcommitz/vanilla" target="_blank" class="github-link">GitHub</a>
+        </nav>
+      </div>
+      <nav data-vanillamd-sidebar>
+        <a href="index.html">Introduction</a>
+        <a href="docs.html">Documentation</a>
       </nav>
-    </header>
+    </aside>
 
     <main data-vanillamd-autofill="docs.md"></main>
-
-    <footer>
-      <span>&copy; 2026 Felix</span>
-      <nav>
-        <a href="https://asapcommitz.github.io/vanilla">Home</a>
-      </nav>
-    </footer>
   </div>
 
   <!-- vanilla.md runtime -->

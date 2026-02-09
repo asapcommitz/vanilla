@@ -4,14 +4,14 @@ Markdown, minus the nonsense. A lightweight, dependency-free renderer for the mo
 
 ## Typography
 
-Good typography makes content readable. vanilla.md uses a carefully selected pair: **Inter** for all text and **Space Mono** for code.
+Good typography makes content readable. vanilla.md uses a carefully selected pair: **Geist Sans** for all text and **Geist Mono** for code.
 
 You can emphasize text using **bold**, *italics*, or ~~strikethrough~~.
 Highlighted text is also supported using ==double equals==.
 
 ## Code
 
-Code blocks are styled with **Space Mono** and utilize the minimalist `f5f5f5` background.
+Code blocks are styled with **Geist Mono** and utilize the minimalist `f5f5f5` background.
 
 ```javascript
 // Example of a code block

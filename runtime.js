@@ -27659,7 +27659,8 @@ pre>code.diff-highlight .token.inserted:not(.prefix) {
 			text = text.replace(/\^\^([^\^]+)\^\^/g, '<sup>$1</sup>');
 			text = text.replace(/~([^~]+)~/g, '<sub>$1</sub>');
 
-			text = text.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1">$1</a>');
+			// 2. Auto-link URLs (excluding those already in HTML attributes)
+			text = text.replace(/([^"'])((?:https?|ftp):\/\/[^\s<]+)/g, '$1<a href="$2">$2</a>');
 
 			text = text.replace(/:\w+:/g, (match) => {
 				const emoji = this.getEmoji(match);
@@ -27677,7 +27678,7 @@ pre>code.diff-highlight .token.inserted:not(.prefix) {
 				':fire:': '🔥',
 				':rocket:': '🚀',
 				':check:': '✓',
-				':x:': '✗',
+				':cross:': '✗',
 				':warning:': '⚠️',
 				':info:': 'ℹ️',
 				':bulb:': '💡',

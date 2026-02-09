@@ -27747,11 +27747,16 @@ pre>code.diff-highlight .token.inserted:not(.prefix) {
 				// Lazy load headings on open
 				details.addEventListener('toggle', async () => {
 					if (details.open && content.innerHTML === '') {
-						const pageMatch = href.match(/\?page=([^&]+)/) || [null, href];
-						const src = pageMatch[1];
+						// Fix: Correctly extract the source path
+						let src = href;
+						const pageMatch = href.match(/[?&]page=([^&]+)/);
+						if (pageMatch) {
+							src = pageMatch[1];
+						}
 
 						try {
 							content.innerHTML = '<div class="sidebar-loading">Loading...</div>';
+							// Use the robust fetch logic here too if needed, but for now standard fetch
 							const md = await fetch(src).then(r => r.text());
 							const { headings } = renderer.renderMarkdown(md);
 							content.innerHTML = '';
